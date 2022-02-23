@@ -1,0 +1,5 @@
+# pip install -r /path/to/requirements.txt
+opencv-python
+pytesseract
+pyautogui >= 0.9.52
+
