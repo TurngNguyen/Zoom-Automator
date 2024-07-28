@@ -59,15 +59,3 @@ Zoom Automator is a Python script designed to automate the process of joining an
 The `main` function contains two loops:
 1. The first loop checks for meeting start times and joins the meeting when it's time.
 2. The second loop checks for meeting end times or participant count and leaves the meeting accordingly.
-
-## License
-
-This project is licensed under the terms of the GNU General Public License. See the [LICENSE](CPSC386/mario/LICENSE) file for details.
-
-## Contributing
-
-Feel free to submit issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
-## Contact
-
-For any questions or inquiries, please contact [Your Name] at [Your Email].
