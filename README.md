@@ -1,3 +1,4 @@
+# OLD PROJECT
 # Zoom Automator
 
 Zoom Automator is a Python script designed to automate the process of joining and leaving Zoom meetings. It uses `pytesseract` for OCR to read the number of participants in a meeting.
@@ -22,10 +23,7 @@ Zoom Automator is a Python script designed to automate the process of joining an
     pip install pyautogui opencv-python pytesseract
     ```
 
-2. Replace the `ZOOM_FILE` variable in the script with the path to your `Zoom.exe` file:
-    ```python
-    ZOOM_FILE = r"C:/Users/YourUsername/AppData/Roaming/Zoom/bin/Zoom.exe"
-    ```
+2. Create a .env file and set the `ZOOM_FILE` variable in the script with the path to your `Zoom.exe` file. Do the same with your zoom host id and pytesseract, "HOST_ID" and "PYTESSERACT", respectively.
 
 3. Ensure `pytesseract` is correctly installed and configured on your system.
 
