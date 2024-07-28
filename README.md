@@ -1,6 +1,6 @@
 # Zoom Automator
 
-Zoom Automator is a Python script designed to automate the process of joining and leaving Zoom meetings. It uses `pyautogui` for GUI automation and `pytesseract` for OCR to read the number of participants in a meeting.
+Zoom Automator is a Python script designed to automate the process of joining and leaving Zoom meetings. It uses `pytesseract` for OCR to read the number of participants in a meeting.
 
 ## Features
 
