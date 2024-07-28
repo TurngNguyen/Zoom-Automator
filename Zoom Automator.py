@@ -1,28 +1,11 @@
 import datetime
 from time import sleep
 import subprocess
-# import webbrowser
 import pyautogui as pg
 from pytesseract import pytesseract, image_to_string
+from dotenv import load_dotenv, dotenv_values 
 
-"""
-How to use:
-1. Install whatever imports you need. (Probably pyautogui, opencv-python, pytesseract)
-2. CTRL+F subprocess.Popen(...) and replace the inside with the path for your zoom.exe file on your computer
-3. CTRL+F my_thing. Create meeting object. 
-   Ex: my_thing = meeting(start_time, end_time, meeting_id)  
-"""
-
-"""
-Mon/Wed
-Math 270B: 835 5497 1111 (14:30 - 15:30)
-CS 240: 997 5604 8746 (20:00 - 21:50)
-
-Tues/Thurs
-Music 100: 836 6445 1242 (20:30 - 21:30)
-CS 233: 814 0991 5762 (19:30 - 21:20)
-"""
-
+load_dotenv()
 
 class meeting:
     def __init__(self, start_time: str, end_time: str, meeting_id: str = "", url: str = ""):
@@ -40,7 +23,7 @@ def enter_zoom(meeting_id: str):
 
     # Step 1: Open zoom
     pg.hotkey("win", "d")
-    subprocess.Popen(r"C:\Users\yugin\AppData\Roaming\Zoom\bin\Zoom.exe")
+    subprocess.Popen(os.getenv("ZOOM_FILE"))
 
     sleep(3)
 
@@ -83,12 +66,12 @@ def leave_zoom(host: bool = False):
 
 
 # Necessary to use pytesseract
-pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-host_id = "849 020 1718"
+pytesseract.tesseract_cmd = os.getenv("TESSERACT_FILE")
+host_id = os.getenv("HOST_ID")
 current_time = datetime.datetime.now()
 
 # TIMES HAVE TO BE FROM 0-23, NOT 0-12
-my_thing = meeting("19:31", "19:30", "814 0991 5762")
+my_thing = meeting("19:31", "19:30", host_id)
 
 # For joining zoom
 while True:
